@@ -1,0 +1,15 @@
+function whatCentury(year)
+{
+const year1=parseInt(year);
+const c=Math.floor((year1-1)/100)+1;
+//wiwiwiwiwi
+  if (c% 100 >=11 & c%100<=13){
+    return c+'th';
+  }
+  switch(c%10){
+      case 1:return c+'st';
+      case 2:return c+'nd';
+      case 3:return c+'rd';
+      default: return c+'th';
+  }
+}

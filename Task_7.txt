@@ -1,0 +1,18 @@
+function wave(str){
+let rez=[];
+  for(let i=0; i<str.length;i++){
+    if(str[i]===' ') continue;
+    let str1= '';
+    for(let j=0;j<str.length;j++){
+      if(j===i){
+        str1+=str[j].toUpperCase();
+      }
+      else{
+        str1+=str[j];
+      }
+    }
+    rez.push(str1);
+  }
+  return rez
+}
+//я в такие игры не играю

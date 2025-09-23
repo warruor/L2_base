@@ -1,0 +1,12 @@
+function ipv4Parser(ip, mask){
+  const ipP=ip.split('.').map(Number);
+  const maskP=mask.split('.').map(Number);
+  const okak=[];
+  const okak1=[];
+  for(let i=0;i<4;i++){
+    okak.push(ipP[i]&maskP[i]);
+    okak1.push(ipP[i]-okak[i]);
+  }
+  return[okak.join('.'),okak1.join('.')]
+  //ну это что за блин вообще капец..
+}

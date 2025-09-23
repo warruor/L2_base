@@ -1,0 +1,27 @@
+function hexStringToRGB(hexString) {
+  let rez={ r: 0, g: 0, b: 0 };
+  let colori=0;
+  for(let i=1; i<hexString.length; i+=2){
+    let v=0;
+    for(let j=0; j<2; j++){
+      let c=hexString[i+j];
+      let dig=0;
+      if(c>='0'&&c<='9'){
+        dig=c.charCodeAt(0) - '0'.charCodeAt(0);
+      }
+      else if(c>='a'&&c<='f'){
+        dig=10 + (c.charCodeAt(0) - 'a'.charCodeAt(0));
+      }
+      else if(c>='A'&&c<="F"){
+        dig=10 + (c.charCodeAt(0) - 'A'.charCodeAt(0));
+      }
+      v=v*16+dig;
+    }
+        
+      if(colori==0) rez.r=v;
+      else if(colori==1) rez.g=v;
+      else rez.b=v;
+      colori++;
+    }
+    return rez;
+  }

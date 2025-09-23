@@ -1,0 +1,20 @@
+function expandedForm(num) {
+let rez='';
+  let del=1;
+  while(num/del>=10){
+    del*=10;
+  }
+  let t=num;
+  while(del>=1){
+    const dig=Math.floor(t/del);
+    if(dig!==0){
+      if(rez!==""){
+        rez+=' + ';
+      }
+      rez+=dig*del;
+    }
+    t%=del;
+    del=Math.floor(del/10);
+  }
+  return rez;
+}
