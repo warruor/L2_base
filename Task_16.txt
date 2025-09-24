@@ -1,0 +1,50 @@
+Array.prototype.square = function() {
+  let rez = [];
+  for (let i = 0; i < this.length; i++) {
+    rez.push(this[i] * this[i]);
+  }
+  return rez;
+};
+
+Array.prototype.cube = function() {
+  let rez = [];
+  for (let i = 0; i < this.length; i++) {
+    rez.push(this[i] * this[i] * this[i]);
+  }
+  return rez;
+};
+
+Array.prototype.sum = function() {
+  let tik = 0;
+  for (let i = 0; i < this.length; i++) {
+    tik += this[i];
+  }
+  return tik;
+};
+
+Array.prototype.average = function() {
+  if (this.length === 0) {
+    return Number.NaN;
+  }
+  return this.sum() / this.length;
+};
+
+Array.prototype.even = function() {
+  let rez = [];
+  for (let i = 0; i < this.length; i++) {
+    if (this[i] % 2 === 0) {
+      rez.push(this[i]); 
+    }
+  }
+  return rez;
+};
+
+Array.prototype.odd = function() {
+  let rez = [];
+  for (let i = 0; i < this.length; i++) {
+    if (this[i] % 2 !== 0) {
+      rez.push(this[i]);
+    }
+  }
+  return rez;
+};
